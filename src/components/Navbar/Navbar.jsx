@@ -12,15 +12,17 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
-        <Sidebar />
-        <motion.span
-          variants={navbarMotion}
-          initial="initial"
-          animate="animate"
-          transition="transition"
-        >
-          Sina Pirvand
-        </motion.span>
+        <div>
+          <Sidebar />
+          <motion.span
+            variants={navbarMotion}
+            initial="initial"
+            animate="animate"
+            transition="transition"
+          >
+            Sina Pirvand
+          </motion.span>
+        </div>
         <motion.button
           variants={navbarMotion}
           initial="initial"

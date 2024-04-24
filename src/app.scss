@@ -8,6 +8,24 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111132;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #663399;
+  border-radius: 3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7547a3;
 }
 
 body {
