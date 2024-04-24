@@ -8,6 +8,7 @@
     max-width: 1366px;
     margin: auto;
     height: 100%;
+    z-index: 2;
 
     .textContainer {
       height: 100%;
@@ -44,6 +45,13 @@
         cursor: pointer;
         font-weight: 300;
       }
+
+      button:hover {
+        scale: 0.95;
+        transition: all;
+        transition-duration: 0.3s;
+      }
+
       .btnFilled {
         color: #0c0c1d;
         background-color: #fff;
