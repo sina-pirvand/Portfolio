@@ -1,0 +1,111 @@
+.aboutMeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3rem 3rem;
+
+    .aboutMeText {
+      padding: 3rem 1rem;
+
+      h1 {
+        font-size: 64px;
+        color: #ffa500;
+      }
+
+      p {
+        font-size: 32px;
+        margin-top: 1rem;
+        line-height: 1.4;
+      }
+    }
+
+    .aboutMeImg {
+      img {
+        max-width: 768px;
+        margin-top: -96px;
+      }
+    }
+
+    .aboutMeIcons {
+      padding: 6rem 1rem;
+    }
+
+    .aboutMeIconsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 2.5rem;
+      margin-top: 4rem;
+
+      .abilityContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: bold;
+
+        .itemContainer {
+          padding: 1rem;
+          border-radius: 16px;
+
+          .aboutMeIcon {
+            height: 32px;
+            width: 32px;
+          }
+        }
+        .itemContainer-green {
+          background-color: #eefde6;
+          color: #aaf683;
+        }
+        .itemContainer-yellow {
+          background-color: #fffcec;
+          color: #fee440;
+        }
+        .itemContainer-red {
+          background-color: #ffeaed;
+          color: #ee747e;
+        }
+        .itemContainer-blue {
+          background-color: #e9fcfc;
+          color: #90f1ef;
+        }
+        .abilityText-green {
+          color: #aaf683;
+        }
+        .abilityText-yellow {
+          color: #fee440;
+        }
+        .abilityText-red {
+          color: #ee747e;
+        }
+        .abilityText-blue {
+          color: #90f1ef;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    .aboutMe {
+      flex-direction: row;
+
+      .aboutMeText {
+        width: 50%;
+      }
+      .aboutMeIcons {
+        width: 50%;
+      }
+      .aboutMeIconsContainer {
+      }
+    }
+  }
+}
