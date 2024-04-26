@@ -8,30 +8,63 @@ const items = [
     title: "Freelancera",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis in aspernatur consequuntur atque repudiandae, error facilis cumque ducimus, molestias distinctio dolores itaque excepturi unde totam repellendus? Facere, deleniti ducimus.",
-    img: "/info.png",
+    img: "/Freelancera.jpg",
   },
   {
     id: 2,
     title: "Freelancera",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis in aspernatur consequuntur atque repudiandae, error facilis cumque ducimus, molestias distinctio dolores itaque excepturi unde totam repellendus? Facere, deleniti ducimus.",
-    img: "/info.png",
+    img: "/Freelancera.jpg",
   },
   {
     id: 3,
     title: "Freelancera",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis in aspernatur consequuntur atque repudiandae, error facilis cumque ducimus, molestias distinctio dolores itaque excepturi unde totam repellendus? Facere, deleniti ducimus.",
-    img: "/info.png",
+    img: "/Freelancera.jpg",
   },
   {
     id: 4,
     title: "Freelancera",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis in aspernatur consequuntur atque repudiandae, error facilis cumque ducimus, molestias distinctio dolores itaque excepturi unde totam repellendus? Facere, deleniti ducimus.",
-    img: "/info.png",
+    img: "/Freelancera.jpg",
   },
 ];
+
+const ProjectSection = ({ item }) => {
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
+  return (
+    <section>
+      <div className="container">
+        <div className="wrapper">
+          <img src={item.img} alt="Preview Image" ref={ref} />
+          {/* style = {{y:y}} => style={{y}} */}
+          <motion.div
+            className="textContainer"
+            style={{ y }}
+            transition={{
+              type: "spring",
+              stiffness: 30,
+              damping: 10,
+            }}
+          >
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+            <motion.button whileHover={{ scale: 0.95 }}>See Demo</motion.button>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Portfolio = () => {
   const ref = useRef();
@@ -42,7 +75,7 @@ const Portfolio = () => {
   });
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
-    damping: 5,
+    damping: 30,
   });
 
   return (
