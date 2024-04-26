@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { FaTelegram, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import "./contact.scss";
 
 const variants = {
@@ -71,12 +72,28 @@ const Contact = () => {
         <motion.h1 variants={variants}>Contact me anytime</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>sinaprvnd.webdev.com</span>
+          <span>sinaprvnd.webdev@gmail.com</span>
         </motion.div>
-        <div className="socials">
-          <span>insta</span>
-          <span>linkedIn</span>
-        </div>
+        <motion.div className="item" variants={variants}>
+          <h2>Socials</h2>
+          <motion.a
+            href="https://www.linkedin.com/in/sina-pirvand"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedinIn />
+          </motion.a>
+          <a
+            href="https://github.com/sina-pirvand"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
+          </a>
+          <a href="https://t.me/CyberSageB2" target="_blank" rel="noreferrer">
+            <FaTelegram />
+          </a>
+        </motion.div>
       </motion.div>
       <div className="formContainer">
         <motion.div
