@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
-import "./navbar.scss";
+import {
+  HiChevronDown,
+  HiChevronUp,
+  HiOutlineDownload,
+  HiEye,
+} from "react-icons/hi";
 import Sidebar from "../sidebar/Sidebar";
+import "./navbar.scss";
+import { useState } from "react";
 
 const navbarMotion = {
   initial: { opacity: 0, scale: 0.5 },
@@ -9,6 +16,10 @@ const navbarMotion = {
 };
 
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+  const handleClick = () => {
+    setShow((s) => !s);
+  };
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -23,14 +34,42 @@ const Navbar = () => {
             Sina Pirvand
           </motion.span>
         </div>
-        <motion.button
-          variants={navbarMotion}
-          initial="initial"
-          animate="animate"
-          transition="transition"
-        >
-          Download CV
-        </motion.button>
+        <div className="dropdown">
+          <motion.button
+            variants={navbarMotion}
+            initial="initial"
+            animate="animate"
+            transition="transition"
+            onClick={handleClick}
+          >
+            <span>Check Out CV</span>
+            {show ? (
+              <HiChevronUp className="icon" />
+            ) : (
+              <HiChevronDown className="icon" />
+            )}
+          </motion.button>
+          {show && (
+            <div className="dropdownList">
+              <a
+                href="https://cvbuilder.me/Resume/en/3ab59f21-0a30-4a66-a778-f7c36ba327ca?template=Template9"
+                target="_blank"
+                rel="noreferrer"
+                onClick={handleClick}
+              >
+                <HiEye style={{ fontSize: "1.2rem", marginLeft: "0.1rem" }} />
+                <span>View Online</span>
+              </a>
+              <a
+                href="https://cvbuilder.me/Builder/Pdf/en/Template9/3ab59f21-0a30-4a66-a778-f7c36ba327ca/MyResume-708[www.cvbuilder.me].pdf?snapshot=true"
+                onClick={handleClick}
+              >
+                <HiOutlineDownload className="icon" />
+                <span>Download</span>
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
