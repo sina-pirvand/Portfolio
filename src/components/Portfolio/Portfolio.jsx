@@ -52,7 +52,7 @@ const ProjectSection = ({ item }) => {
             style={{ y }}
             transition={{
               type: "spring",
-              stiffness: 30,
+              stiffness: 10,
               damping: 10,
             }}
           >
