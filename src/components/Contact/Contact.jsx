@@ -1,6 +1,7 @@
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import "./contact.scss";
-import { useRef } from "react";
 
 const variants = {
   initial: {
@@ -17,9 +18,46 @@ const variants = {
   },
 };
 
+const messageVariants = {
+  initial: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: 0,
+    transition: {
+      duration: 6,
+    },
+  },
+};
+
 const Contact = () => {
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   const ref = useRef();
+  const formRef = useRef();
+
   const isInView = useInView(ref, { margin: "-100px" });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_jpb2sth", "template_0hcwkmn", formRef.current, {
+        publicKey: "k2SkG6I55xyTBI6jD",
+      })
+      .then(
+        () => {
+          setSuccess(true);
+          console.log("SUCCESS!");
+          formRef.current.reset();
+        },
+        (error) => {
+          setError(true);
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   return (
     <motion.div
@@ -74,13 +112,35 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 3, duration: 1 }}
+          ref={formRef}
+          onSubmit={sendEmail}
         >
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea rows={8} placeholder="Message..." required />
+          <input type="text" placeholder="Name" required name="name" />
+          <input type="email" placeholder="Email" required name="email" />
+          <textarea rows={8} placeholder="Message..." required name="message" />
           <motion.button type="submit" whileHover={{ scale: 0.95 }}>
             Submit
           </motion.button>
+          {error && (
+            <motion.span
+              className="error"
+              variants={messageVariants}
+              initial="initial"
+              animate="animate"
+            >
+              Couldn't Send Message
+            </motion.span>
+          )}
+          {success && (
+            <motion.span
+              className="success"
+              variants={messageVariants}
+              initial="initial"
+              animate="animate"
+            >
+              Message Sent
+            </motion.span>
+          )}
         </motion.form>
       </div>
     </motion.div>

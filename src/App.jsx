@@ -5,10 +5,12 @@ import Parallax from "./components/common/Parallax/Parallax";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/contact";
+import Cursor from "./components/common/Cursor/Cursor";
 
 const App = () => {
   return (
-    <div>
+    <>
+      <Cursor />
       <section id="Homepage">
         <Navbar />
         <Hreo />
@@ -26,7 +28,7 @@ const App = () => {
       <section id="Contact">
         <Contact />
       </section>
-    </div>
+    </>
   );
 };
 

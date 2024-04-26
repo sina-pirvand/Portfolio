@@ -66,6 +66,17 @@
         transition: all;
         transition-duration: 300;
       }
+
+      .error {
+        background-color: #ee747e35;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+      .success {
+        background-color: #aaf68335;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
     }
   }
 }
