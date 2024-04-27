@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { PiPuzzlePiece } from "react-icons/pi";
 import { AiOutlineFire } from "react-icons/ai";
@@ -27,34 +28,58 @@ const items = [
   },
 ];
 
+const variants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.15,
+    },
+  },
+};
+
 const AboutMe = () => {
   return (
     <div className="aboutMeSection">
-      <div className="aboutMe">
-        <div className="aboutMeText">
-          <h1>About Me</h1>
-          <p>
+      <motion.div
+        className="aboutMe"
+        variants={variants}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.div className="aboutMeText" variants={variants}>
+          <motion.h1 variants={variants}>About Me</motion.h1>
+          <motion.p variants={variants}>
             I'm Sina, a Junior Front-end Developer with a real passion for
             taking on new challenges. Super motivated and always eager to learn
             more and enhance my skills. Creating awesome, user-friendly
             experiences is what I'm all about, I'm so excited to keep growing in
             this dynamic industry.
-          </p>
-          <div className="aboutMeIconsContainer">
+          </motion.p>
+          <motion.div className="aboutMeIconsContainer" variants={variants}>
             {items.map((item) => (
-              <div className="abilityContainer" key={item.name}>
+              <motion.div
+                className="abilityContainer"
+                key={item.name}
+                variants={variants}
+              >
                 <div className={`itemContainer itemContainer-${item.color}`}>
                   <item.name className={`aboutMeIcon`} />
                 </div>
                 <span className={`abilityText-${item.color}`}>{item.text}</span>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div className="aboutMeImg">
           <img src="/public/info.png" alt="info" />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

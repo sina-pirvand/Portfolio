@@ -42,7 +42,7 @@ const Navbar = () => {
             transition="transition"
             onClick={handleClick}
           >
-            <span>Check Out CV</span>
+            <span>Check my CV</span>
             {show ? (
               <HiChevronUp className="icon" />
             ) : (
