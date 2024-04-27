@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { PiPuzzlePiece } from "react-icons/pi";
 import { AiOutlineFire } from "react-icons/ai";
 import { LuTextSelect } from "react-icons/lu";
+import { useRef } from "react";
 import "./aboutMe.scss";
 
 const items = [
@@ -44,13 +45,17 @@ const variants = {
 };
 
 const AboutMe = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="aboutMeSection">
       <motion.div
         className="aboutMe"
         variants={variants}
         initial="initial"
-        animate="animate"
+        animate={isInView ? "animate" : "initial"}
+        ref={ref}
       >
         <motion.div className="aboutMeText" variants={variants}>
           <motion.h1 variants={variants}>About Me</motion.h1>
@@ -77,7 +82,7 @@ const AboutMe = () => {
           </motion.div>
         </motion.div>
         <div className="aboutMeImg">
-          <img src="/public/info.png" alt="info" />
+          <img src="/info.png" alt="info" />
         </div>
       </motion.div>
     </div>

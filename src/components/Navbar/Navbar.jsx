@@ -61,7 +61,7 @@ const Navbar = () => {
                 <span>View Online</span>
               </a>
               <a
-                href="https://cvbuilder.me/Builder/Pdf/en/Template9/3ab59f21-0a30-4a66-a778-f7c36ba327ca/MyResume-708[www.cvbuilder.me].pdf?snapshot=true"
+                href="https://drive.google.com/uc?export=download&id=1f4TWluJHILiZjOut9IQ3bd7A3LAVldWb"
                 onClick={handleClick}
               >
                 <HiOutlineDownload className="icon" />

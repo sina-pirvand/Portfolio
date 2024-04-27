@@ -16,6 +16,8 @@
       flex-direction: column;
       justify-content: center;
       gap: 2.5rem;
+      z-index: 10;
+      padding-left: 1rem;
     }
 
     h2 {
@@ -68,7 +70,7 @@
       position: absolute;
       top: 0;
       right: -10vw;
-      z-index: 2;
+      z-index: -10;
     }
   }
 

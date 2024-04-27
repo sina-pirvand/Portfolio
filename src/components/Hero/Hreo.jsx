@@ -38,6 +38,18 @@ const sliderVariants = {
   },
 };
 
+const imageVariants = {
+  animate: {
+    y: [20, -20],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      repeatType: "reverse",
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Hreo = () => {
   return (
     <div className="hero">
@@ -64,14 +76,19 @@ const Hreo = () => {
           </motion.div>
           <motion.img
             className="scrollImg"
-            src="/public/scroll.png"
+            src="/scroll.png"
             alt="Scroll Item"
             variants={textVariants}
             animate="scrollButton"
           />
         </motion.div>
         <div className="imageContainer">
-          <img src="/public/hero.png" alt="" />
+          <motion.img
+            src="heroImg.png"
+            alt="hero-img"
+            variants={imageVariants}
+            animate="animate"
+          />
         </div>
       </div>
       <motion.div

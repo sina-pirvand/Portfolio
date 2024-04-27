@@ -1,5 +1,6 @@
 .navbar {
   height: 100px;
+  padding: 0 1rem 0 6rem;
   .wrapper {
     max-width: 1366px;
     margin: auto;
@@ -10,7 +11,6 @@
 
     span {
       font-weight: bold;
-      margin-left: 6rem;
     }
 
     .dropdown {
@@ -19,18 +19,19 @@
         background-color: #ffa500;
         border: none;
         border-radius: 10px;
-        width: auto;
+        width: 180px;
         font-weight: 500;
         padding: 0.75rem 1rem;
         font-size: 1rem;
         margin-top: 1rem;
         cursor: pointer;
         transition: all;
-        transition-duration: 300;
+        transition-duration: 300ms;
         z-index: 2;
         position: relative;
         display: flex;
         gap: 0.5rem;
+        white-space: nowrap;
       }
 
       .icon {
@@ -71,10 +72,8 @@
   }
 
   @media screen and (min-width: 1500px) {
-    .wrapper {
-      span {
-        margin-left: 0;
-      }
+    .navbar {
+      padding: 0;
     }
   }
 }
