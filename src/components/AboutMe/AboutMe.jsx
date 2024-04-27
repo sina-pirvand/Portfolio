@@ -44,6 +44,18 @@ const variants = {
   },
 };
 
+const imgVariants = {
+  animate: {
+    scale: [0.98, 1.03, 0.98],
+    transition: {
+      duration: 6,
+      repeat: Infinity,
+      repeatType: "loop",
+      ease: "linear",
+    },
+  },
+};
+
 const AboutMe = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -81,9 +93,13 @@ const AboutMe = () => {
             ))}
           </motion.div>
         </motion.div>
-        <div className="aboutMeImg">
+        <motion.div
+          className="aboutMeImg"
+          variants={imgVariants}
+          animate="animate"
+        >
           <img src="/info.png" alt="info" />
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

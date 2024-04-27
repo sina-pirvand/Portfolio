@@ -7,29 +7,33 @@ const items = [
     id: 1,
     title: "Freelancera",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis in aspernatur consequuntur atque repudiandae, error facilis cumque ducimus, molestias distinctio dolores itaque excepturi unde totam repellendus? Facere, deleniti ducimus.",
+      "Freelancer Platform containing 3 dashboards (Freelancer, Employer, Admin) where users can create projects and send proposals. React.js, React Query, Axios, React hook form, React Router DOM, Tailwind,... used on client-side, backend running on MongoDB built with Express.js",
     img: "/Freelancera.jpg",
+    url: "https://freelancera-app.liara.run",
   },
   {
     id: 2,
-    title: "Freelancera",
+    title: "Quera Task Manager",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis in aspernatur consequuntur atque repudiandae, error facilis cumque ducimus, molestias distinctio dolores itaque excepturi unde totam repellendus? Facere, deleniti ducimus.",
-    img: "/Freelancera.jpg",
+      "Team project during Quera bootcamp using React.js, TS, React Router DOM, Axios, Tailwind, and etc.",
+    img: "/taskManager.jpg",
+    url: "https://exxzam-task-manager.liara.run",
   },
   {
     id: 3,
-    title: "Freelancera",
+    title: "Rick-and-Morty",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis in aspernatur consequuntur atque repudiandae, error facilis cumque ducimus, molestias distinctio dolores itaque excepturi unde totam repellendus? Facere, deleniti ducimus.",
-    img: "/Freelancera.jpg",
+      "A small fun app about Rick and Morty TV Show characters. using Reactjs, Axios, Tailwind, etc.",
+    img: "/rick-morty.jpg",
+    url: "https://rick-and-morty-csb2.netlify.app",
   },
   {
     id: 4,
-    title: "Freelancera",
+    title: "ARC Trip",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis in aspernatur consequuntur atque repudiandae, error facilis cumque ducimus, molestias distinctio dolores itaque excepturi unde totam repellendus? Facere, deleniti ducimus.",
-    img: "/Freelancera.jpg",
+      "Hotel reservation website including landing page, registration form, hotel display page, results page, blog, payment page, and user panel. Built with HTML, CSS, JS, jQuery, Bootstrap5",
+    img: "/arctrip.jpg",
+    url: "https://arctrip.ir",
   },
 ];
 
@@ -58,7 +62,14 @@ const ProjectSection = ({ item }) => {
           >
             <h2>{item.title}</h2>
             <p>{item.description}</p>
-            <motion.button whileHover={{ scale: 0.95 }}>See Demo</motion.button>
+            <motion.a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ scale: 0.95 }}
+            >
+              See Demo
+            </motion.a>
           </motion.div>
         </div>
       </div>
