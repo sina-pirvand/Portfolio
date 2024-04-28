@@ -1,7 +1,18 @@
+@import "../../app.scss";
+
 .hero {
   height: calc(100vh - 100px);
   background: linear-gradient(180deg, #0c0c1d, #111132);
   overflow: hidden;
+  padding-top: 1rem;
+
+  @include medium {
+    padding-left: 2rem;
+  }
+
+  @include xlarge {
+    padding-left: unset;
+  }
 
   .wrapper {
     position: relative;
@@ -33,11 +44,16 @@
     }
 
     h1 {
-      font-size: 88px;
+      font-size: 64px;
+
+      @include medium {
+        font-size: 88px;
+      }
     }
 
     .buttons {
-      button {
+      a {
+        display: inline-block;
         padding: 1.5rem;
         border: 1px solid white;
         border-radius: 1.2rem;
@@ -63,6 +79,11 @@
 
     .scrollImg {
       width: 50px;
+      margin-left: calc(50% - 50px);
+
+      @include medium {
+        margin-left: unset;
+      }
     }
 
     .imageContainer {
@@ -75,12 +96,20 @@
   }
 
   .slidingTextContainer {
-    font-size: 50vh;
+    font-size: 35vh;
     position: absolute;
     bottom: -80px;
     white-space: nowrap;
     color: #ffffff12;
     font-weight: bold;
     width: 50%;
+
+    @include medium {
+      font-size: 45vh;
+    }
+
+    @include xlarge {
+      font-size: 50vh;
+    }
   }
 }

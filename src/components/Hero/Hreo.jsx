@@ -67,12 +67,16 @@ const Hreo = () => {
             Front-end <br /> Web Developer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
+            <motion.a href="#Portfolio" variants={textVariants}>
               See My Latest Works
-            </motion.button>
-            <motion.button variants={textVariants} className="btnFilled">
+            </motion.a>
+            <motion.a
+              href="#Contact"
+              variants={textVariants}
+              className="btnFilled"
+            >
               Contact Me
-            </motion.button>
+            </motion.a>
           </motion.div>
           <motion.img
             className="scrollImg"
