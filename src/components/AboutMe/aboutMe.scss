@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .aboutMeSection {
   display: flex;
   flex-direction: column;
@@ -6,34 +8,76 @@
 
   .aboutMe {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-evenly;
-    padding: 3rem 3rem;
+    padding: 3rem 0.5rem;
+
+    @include medium {
+      padding: 3rem 3rem;
+    }
+
+    @include xlarge {
+      flex-direction: row;
+    }
 
     .aboutMeText {
-      padding: 3rem 1rem;
+      padding: 0 1rem;
+      margin-top: 2rem;
+
+      @include medium {
+        margin-top: 20vh;
+      }
+
+      @include xlarge {
+        width: 50%;
+        padding: 3rem 1rem;
+        margin-top: 5vh;
+      }
 
       h1 {
-        font-size: 64px;
+        font-size: 36px;
         color: #ffa500;
+
+        @include small {
+          font-size: 64px;
+        }
       }
 
       p {
-        font-size: 32px;
-        margin-top: 1rem;
+        font-size: 22px;
+        margin-top: 0.5rem;
         line-height: 1.4;
+
+        @include medium {
+          font-size: 32px;
+          margin-top: 1rem;
+        }
       }
     }
 
     .aboutMeImg {
-      img {
-        max-width: 768px;
-        margin-top: -96px;
-      }
-    }
+      display: none;
 
-    .aboutMeIcons {
-      padding: 6rem 1rem;
+      @include medium {
+        display: block;
+      }
+
+      img {
+        max-width: 380px;
+        margin-top: -4rem;
+        position: absolute;
+        right: 0;
+
+        @include xlarge {
+          max-width: 468px;
+          margin-top: -96px;
+          position: unset;
+        }
+
+        @include xxlarge {
+          max-width: 768px;
+        }
+      }
     }
 
     .aboutMeIconsContainer {
@@ -41,7 +85,12 @@
       align-items: center;
       justify-content: start;
       gap: 2.5rem;
-      margin-top: 4rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+
+      @include medium {
+        margin-top: 4rem;
+      }
 
       .abilityContainer {
         display: flex;
@@ -49,6 +98,11 @@
         align-items: center;
         gap: 0.75rem;
         font-weight: bold;
+        width: calc(50% - 1.25rem);
+
+        @include small {
+          width: auto;
+        }
 
         .itemContainer {
           padding: 1rem;
@@ -87,24 +141,6 @@
         .abilityText-blue {
           color: #90f1ef;
         }
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1024px) {
-    .aboutMe {
-      flex-direction: row;
-
-      .aboutMeText {
-        width: 50%;
-      }
-      .aboutMeIcons {
-        width: 50%;
-      }
-      .aboutMeIconsContainer {
       }
     }
   }
