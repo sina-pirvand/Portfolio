@@ -1,52 +1,101 @@
+@import "../../app.scss";
+
 .contact {
   height: 100%;
   max-width: 1366px;
+  padding: 0 1rem;
   margin: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 0rem;
+
+  @include medium {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  @include xlarge {
+    padding: 0 2rem;
+  }
 
   .textContainer {
-    flex: 1;
+    flex: 0.6;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    margin-top: -15rem;
+    gap: 1rem;
+    margin-top: 5rem;
+
+    @include medium {
+      flex: 1;
+      gap: 3rem;
+      margin-top: -22vh;
+    }
 
     h1 {
-      font-size: 4rem;
+      font-size: 2.2rem;
+
+      @include medium {
+        font-size: 4rem;
+      }
     }
     .item {
       line-height: 1.2;
 
       h2 {
-        font-size: 2rem;
+        font-size: 1.4rem;
+
+        @include medium {
+          font-size: 2rem;
+        }
       }
 
       span {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+
+        @include medium {
+          font-size: 1.5rem;
+        }
       }
 
       a {
         display: inline-block;
-        font-size: 2rem;
+        font-size: 1.4rem;
         margin: 1.2rem 1rem 0 0;
         cursor: pointer;
         transition: all;
         transition-duration: 300ms;
+        margin-bottom: 1rem;
 
-        &:first-of-type:hover {
-          color: #0077b2 !important;
-          filter: drop-shadow(0px 2px 10px #ffffff80);
+        &:first-of-type {
+          &:hover,
+          &:focus,
+          &:active {
+            color: #0077b2 !important;
+            filter: drop-shadow(0px 2px 10px #ffffff80);
+          }
         }
 
         &:nth-of-type(2n):hover {
-          filter: drop-shadow(0px 2px 10px #fff);
+          &:hover,
+          &:focus,
+          &:active {
+            filter: drop-shadow(0px 2px 10px #fff);
+          }
         }
 
         &:last-of-type:hover {
-          color: #2aabee;
-          filter: drop-shadow(0 2px 10px #ffffff80);
+          &:hover,
+          &:focus,
+          &:active {
+            color: #2aabee;
+            filter: drop-shadow(0 2px 10px #ffffff80);
+          }
+        }
+
+        @include medium {
+          font-size: 2rem;
+          margin-bottom: 0;
         }
       }
     }
@@ -54,6 +103,11 @@
   .formContainer {
     flex: 1;
     position: relative;
+    width: 100%;
+
+    @include medium {
+      width: unset;
+    }
 
     .phoneSvg {
       stroke: orange;
@@ -65,16 +119,25 @@
     form {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
+
+      @include medium {
+        gap: 1.5rem;
+      }
 
       input,
       textarea {
-        padding: 1.2rem;
+        padding: 0.7rem;
         background-color: transparent;
         border: 1px solid #fff;
         color: #fff;
         border-radius: 10px;
-        font-size: 1.2rem;
+        font-size: 1rem;
+
+        @include medium {
+          padding: 1.2rem;
+          font-size: 1.2rem;
+        }
       }
 
       button {
@@ -84,10 +147,13 @@
         font-weight: 500;
         padding: 1rem 1rem;
         font-size: 1rem;
-        margin-top: 1rem;
         cursor: pointer;
         transition: all;
         transition-duration: 300;
+
+        @include medium {
+          margin-top: 1rem;
+        }
       }
 
       .error {
