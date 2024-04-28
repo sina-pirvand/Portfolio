@@ -1,4 +1,5 @@
 @import "../../app.scss";
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -46,7 +47,7 @@
     cursor: pointer;
   }
 
-  @media screen and (min-width: 768px) {
+  @include medium {
     .bg {
       width: 400px;
     }

@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .navbar {
   height: 100px;
   padding: 0 1rem 0 6rem;
@@ -13,8 +15,21 @@
       font-weight: bold;
     }
 
+    .myName {
+      display: none;
+
+      @include medium {
+        display: inherit;
+      }
+    }
+
     .dropdown {
       position: relative;
+      display: flex;
+      align-items: baseline;
+      height: 100%;
+      padding-top: 0.6rem;
+
       button {
         background-color: #ffa500;
         border: none;
@@ -45,7 +60,7 @@
         flex-direction: column;
         gap: 0.5rem;
         position: absolute;
-        bottom: -6.5rem;
+        bottom: -5.25rem;
         width: 100%;
         padding: 0.5rem;
         border-radius: 10px;
@@ -69,12 +84,6 @@
           }
         }
       }
-    }
-  }
-
-  @media screen and (min-width: 1500px) {
-    .navbar {
-      padding: 0;
     }
   }
 }

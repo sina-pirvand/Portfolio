@@ -30,6 +30,7 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             transition="transition"
+            className="myName"
           >
             Sina Pirvand
           </motion.span>
