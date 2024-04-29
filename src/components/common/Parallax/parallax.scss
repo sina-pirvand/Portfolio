@@ -29,7 +29,7 @@
     height: 100%;
     z-index: 3;
 
-    @include xlarge {
+    @include large {
       background-size: cover;
     }
   }
@@ -44,9 +44,10 @@
     height: 100%;
     z-index: 2;
 
-    @include xlarge {
+    @include large {
       background-size: cover;
       background-position: bottom;
+      scale: 1;
     }
   }
   .stars {
