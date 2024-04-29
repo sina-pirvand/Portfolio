@@ -3,7 +3,7 @@ import Hreo from "./components/Hero/Hreo";
 import Parallax from "./components/common/Parallax/Parallax";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Portfolio from "./components/Portfolio/Portfolio";
-import Contact from "./components/Contact/contact";
+import Contact from "./components/Contact/Contact";
 import Cursor from "./components/common/Cursor/Cursor";
 import "./app.scss";
 
