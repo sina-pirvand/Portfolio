@@ -109,10 +109,11 @@
     white-space: nowrap;
     color: #ffffff12;
     font-weight: bold;
-    width: 50%;
+    width: 100%;
 
     @include medium {
       font-size: 45vh;
+      width: 50%;
     }
 
     @include xlarge {

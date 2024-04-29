@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0rem;
+  overflow: hidden;
 
   @include medium {
     flex-direction: row;

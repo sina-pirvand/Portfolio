@@ -94,15 +94,15 @@ const Hreo = () => {
             animate="animate"
           />
         </div>
+        <motion.div
+          className="slidingTextContainer"
+          variants={sliderVariants}
+          initial="initial"
+          animate="animate"
+        >
+          Sina Pirvand
+        </motion.div>
       </div>
-      <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        Sina Pirvand
-      </motion.div>
     </div>
   );
 };
