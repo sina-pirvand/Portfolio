@@ -5,7 +5,7 @@ import {
   HiOutlineDownload,
   HiEye,
 } from "react-icons/hi";
-import Sidebar from "../sidebar/Sidebar";
+import Sidebar from "../Sidebar/Sidebar";
 import "./navbar.scss";
 import { useState } from "react";
 
