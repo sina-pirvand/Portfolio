@@ -12,7 +12,7 @@
   h1 {
     font-size: 5.5rem;
     text-align: center;
-    z-index: 2;
+    z-index: 99;
 
     @include medium {
       font-size: 7.5rem;

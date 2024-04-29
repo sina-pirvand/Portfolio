@@ -105,7 +105,7 @@
   .slidingTextContainer {
     font-size: 35vh;
     position: absolute;
-    bottom: -80px;
+    bottom: -40px;
     white-space: nowrap;
     color: #ffffff12;
     font-weight: bold;
@@ -113,6 +113,7 @@
 
     @include medium {
       font-size: 45vh;
+      bottom: -80px;
       width: 50%;
     }
 
