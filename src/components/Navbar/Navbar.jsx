@@ -62,7 +62,7 @@ const Navbar = () => {
                 <span>View Online</span>
               </a>
               <a
-                href="https://drive.google.com/uc?export=download&id=1f4TWluJHILiZjOut9IQ3bd7A3LAVldWb"
+                href="https://drive.google.com/uc?export=download&id=1UOQN-zP_urKmYHv2hfRQqcafsxpuWMD6"
                 onClick={handleClick}
               >
                 <HiOutlineDownload className="icon" />

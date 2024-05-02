@@ -7,7 +7,7 @@ const items = [
     id: 1,
     title: "Freelancera",
     description:
-      "Freelancer Platform containing 3 dashboards (Freelancer, Employer, Admin) where users can create projects and send proposals. React.js, React Query, Axios, React hook form, React Router DOM, Tailwind,... used on client-side, backend running on MongoDB built with Express.js",
+      "Freelancer Platform containing 3 dashboards (Freelancer, Employer, Admin), where users can create projects and send proposals. React.js, React Query, Axios, React Hook Form, React Router DOM, Tailwind,... used on the client-side, along with using access and refresh tokens for authentication. The backend is built with Express.js and runs on MongoDB.",
     img: "/Freelancera.jpg",
     url: "https://freelancera-app.liara.run",
   },
@@ -15,7 +15,7 @@ const items = [
     id: 2,
     title: "Quera Task Manager",
     description:
-      "Team project during Quera bootcamp using React.js, TS, React Router DOM, Axios, Tailwind, and etc.",
+      "Team project during the Quera bootcamp, utilizing TypeScript, React, React Router DOM, Axios, Tailwind, and other technologies. The project also implements access and refresh tokens for authentication.",
     img: "/taskManager.jpg",
     url: "https://exxzam-task-manager.liara.run",
   },
