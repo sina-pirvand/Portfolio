@@ -110,6 +110,7 @@
     color: #ffffff12;
     font-weight: bold;
     width: 100%;
+    z-index: -999;
 
     @include medium {
       font-size: 45vh;
