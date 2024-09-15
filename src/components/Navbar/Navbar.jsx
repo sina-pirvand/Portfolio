@@ -53,7 +53,7 @@ const Navbar = () => {
           {show && (
             <div className="dropdownList">
               <a
-                href="https://cvbuilder.me/Resume/en/3ab59f21-0a30-4a66-a778-f7c36ba327ca?template=Template9"
+                href="https://drive.google.com/file/d/1ywERjJFyELUgLKskQrG6m4b2M87ibaFA/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 onClick={handleClick}
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <span>View Online</span>
               </a>
               <a
-                href="https://drive.google.com/uc?export=download&id=1UOQN-zP_urKmYHv2hfRQqcafsxpuWMD6"
+                href="https://drive.google.com/uc?export=download&id=1ywERjJFyELUgLKskQrG6m4b2M87ibaFA"
                 onClick={handleClick}
               >
                 <HiOutlineDownload className="icon" />
